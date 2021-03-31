@@ -1,6 +1,13 @@
+body {
+  font-family: $oswald;
+  font-size: 16px;
+  font-weight: 400;
 
+  background-color: $grey;
+}
 
-
-
-
-
+.container {
+    width: $desktop;
+    margin: 0 auto;
+    padding: 0px $desktop-pad;
+}

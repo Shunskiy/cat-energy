@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap");
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -52,4 +53,61 @@ select {
 
 a {
   text-decoration: none;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #f2f2f2;
+}
+
+.container {
+  width: 1300px;
+  margin: 0 auto;
+  padding: 0px 40px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 54px;
+}
+
+.header__link {
+  position: relative;
+  margin-left: 35px;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.header__link::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__link:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
+.header__link:first-child {
+  margin-left: 0;
 }

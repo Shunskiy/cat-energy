@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 54px;
+
+  &__link {
+    position: relative;
+
+    margin-left: 35px;
+
+    color: $white;
+    font-size: 20px;
+    line-height: 25px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+
+      width: 0;
+      height: 2px;
+
+      background-color: $white;
+      visibility: hidden;
+
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      visibility: visible;
+      width: 100%;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
