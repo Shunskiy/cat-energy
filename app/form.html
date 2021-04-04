@@ -15,9 +15,9 @@
         <div class="header__container container">
             <img class="header__logo" src="images/logo-desktop.svg" width="202" height="59" alt="Cat Energy">
             <nav class="header__nav-bar">
-                <a href="./index.html" class="header__link">Главная</a>
-                <a href="./catalog.html" class="header__link">Каталог продукции</a>
-                <a href="./form.html" class="header__link header__link--active-green">Подбор программы</a>
+                <a class="header__link" href="./index.html">Главная</a>
+                <a class="header__link" href="./catalog.html">Каталог продукции</a>
+                <a class="header__link header__link--active" href="./form.html">Подбор программы</a>
             </nav>
         </div>
     </header>
@@ -34,33 +34,32 @@
                         <ul class="form__info-list">
                             <li class="form__info-item">
                                 <label class="form__label" for="cat-name">Имя:*</label>
-                                <input class="form__cat-name" id="cat-name" name="cat-name" placeholder="Барсик"
-                                    type="text">
+                                <input class="form__input" id="cat-name" name="cat-name" placeholder="Барсик"
+                                    type="text" required>
                             </li>
                             <li class="form__info-item">
                                 <label class="form__label" for="cat-weight">Вес (кг):*</label>
-                                <input class="form__cat-name" id="cat-weight" name="cat-weight" placeholder="7"
-                                    type="text">
+                                <input class="form__input" id="cat-weight" name="cat-weight" placeholder="7"
+                                    type="number" required>
                             </li>
                             <li class="form__info-item">
                                 <label class="form__label" for="cat-age">Возраст (лет):</label>
-                                <input class="form__cat-name" id="cat-age" name="cat-age" placeholder="7" type="text">
+                                <input class="form__input" id="cat-age" name="cat-age" placeholder="7" type="number">
                             </li>
                         </ul>
                     </fieldset>
                     <fieldset class="form__about-request">
                         <ul class="form__request-list">
                             <li class="form__request-item">
-                                <input class="form__request-radio" id="request-slim" type="radio" name="request-about">
+                                <input class="form__radio" id="request-slim" type="radio" name="request-about">
                                 <label class="form__label" for="request-slim">Похудение</label>
                             </li>
                             <li class="form__request-item">
-                                <input class="form__request-radio" id="request-gain" type="radio" name="request-about">
+                                <input class="form__radio" id="request-gain" type="radio" name="request-about">
                                 <label class="form__label" for="request-gain">Набор массы</label>
                             </li>
                             <li class="form__request-item">
-                                <input class="form__request-radio" id="request-advice" type="radio"
-                                    name="request-about">
+                                <input class="form__radio" id="request-advice" type="radio" name="request-about">
                                 <label class="form__label" for="request-advice">Не знаю (Нужен ваш совет)</label>
                             </li>
                         </ul>
@@ -73,45 +72,44 @@
                     <ul class="form__owner-list">
                         <li class="form__owner-item">
                             <label class="form__owner-email" for="owner-email">E-mail:*</label>
-                            <input class="form__owner-input form__owner-input--email" id="owner-email"
-                                name="owner-email" type="email" placeholder="kuklachev@gmail.com">
+                            <input class="form__input form__input--email" id="owner-email" name="owner-email"
+                                type="email" placeholder="kuklachev@gmail.com" required>
                         </li>
                         <li class="form_owner-item">
                             <label class="form__owner-tel" for="owner-tel">Телефон:*</label>
-                            <input class="form__owner-input form__owner-input--tel" id="owner-tel" type="tel"
-                                name="owner-tel" pattern="8 ([0-9]{3}) [0-9]{3}-[0-9]{2}-[0-9]{2}"
-                                placeholder="8 (960) 900-60-90">
+                            <input class="form__input form__input--tel" id="owner-tel" type="tel" name="owner-tel"
+                                pattern="8 ([0-9]{3}) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (960) 900-60-90" required>
                         </li>
                     </ul>
                 </fieldset>
                 <fieldset class="form_comment">
                     <legend class="form__section-title form__section-title--comment">Комментарий</legend>
-                    <textarea class="form__comment-input" id="comment-input" name="comment-input" cols="30" rows="10"
+                    <textarea class="form__textarea" id="comment-input" name="comment-input" cols="30" rows="10"
                         placeholder="Расскажите обо всех повадках кота"></textarea>
                 </fieldset>
                 <fieldset class="form__extra">
                     <legend class="form__section-title form__section-title--extra">Дополнительно</legend>
                     <ul class="form__extra-list">
                         <li class="form__extra-item">
-                            <input class="form__extra-input" id="extra-sugar" type="checkbox" name="extra-sugar">
+                            <input class="form__checkbox" id="extra-sugar" type="checkbox" name="extra-sugar">
                             <label class="form__label-text" for="extra-sugar">
                                 Сахарозаменитель
                             </label>
                         </li>
                         <li class="form__extra-item">
-                            <input class="form__extra-input" id="extra-water" type="checkbox" name="extra-water">
+                            <input class="form__checkbox" id="extra-water" type="checkbox" name="extra-water">
                             <label class="form__label-text" for="extra-water">
                                 Питьевая вода
                             </label>
                         </li>
                         <li class="form__extra-item">
-                            <input class="form__extra-input" id="extra-milk" type="checkbox" name="extra-milk">
+                            <input class="form__checkbox" id="extra-milk" type="checkbox" name="extra-milk">
                             <label class="form__label-text" for="extra-milk">
                                 Молоко
                             </label>
                         </li>
                         <li class="form__extra-item">
-                            <input class="form__extra-input" id="extra-vitamins" type="checkbox" name="extra-vitamins">
+                            <input class="form__checkbox" id="extra-vitamins" type="checkbox" name="extra-vitamins">
                             <label class="form__label-text" for="form__extra-vitamins">
                                 Витамины
                             </label>
@@ -143,18 +141,18 @@
             <img class="footer__logo" src="./images/logo-footer.svg" width="128" height="24" alt="Cat Energy">
             <ul class="footer__list">
                 <li class="footer__item">
-                    <a href="#" class="footer__link">
+                    <a class="footer__link" href="#">
                         <img class="footer__link-img" src="./images/icon-vk.svg" width="30" height="16" alt="Вконтакте">
                     </a>
                 </li>
                 <li class="footer__item">
-                    <a href="#" class="footer__link">
+                    <a class="footer__link" href="#">
                         <img class="footer__link-img" src="./images/icon-insta.svg" width="23" height="23"
                             alt="Инстаграм">
                     </a>
                 </li>
                 <li class="footer__item">
-                    <a href="#" class="footer__link">
+                    <a class="footer__link" href="#">
                         <img class="footer__link-img" src="./images/icon-fb.svg" width="14" height="28" alt="Фэйсбук">
                     </a>
                 </li>
