@@ -52,7 +52,7 @@ function styles() {
       .pipe(scss({outputStyle: 'expanded'}))
       .pipe(concat('style.css'))
       .pipe(autoprefixer({
-        overrideBrowserslist: ['last 10 version'],
+        overrideBrowserslist: ['last 2 version'],
         grid: true
       }))
       .pipe(dest('app/css'))

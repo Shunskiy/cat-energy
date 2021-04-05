@@ -1,28 +1,14 @@
-html,
 body {
-	height: 100%;
+  font-family: $basic-font;
+  font-size: 16px;
+  font-weight: 400;
+
+  background-color: $grey;
+
+  overflow-x: hidden;
 }
 
-.wrapper {
-	display: flex;
-	flex-direction: column;
-	min-height: 100%;
-}
-
-.main {
-	flex: 1 0 auto;
-}
-.footer {
-	flex: 0 0 auto;
-}
-
-.container{
-  max-width: 1200px;
+.container {
   margin: 0 auto;
-  padding: 0 15px;
+  width: $desktop;
 }
-
-
-
-
-
