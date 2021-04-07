@@ -2,8 +2,9 @@ body {
   font-family: $basic-font;
   font-size: 16px;
   font-weight: 400;
+  color: $text-color;
 
-  background-color: $grey;
+  background-color: $white;
 
   overflow-x: hidden;
 }
@@ -11,4 +12,233 @@ body {
 .container {
   margin: 0 auto;
   width: $desktop;
+  padding: 0 $desktop-pad;
+}
+
+.header {
+  margin-bottom: 34px;
+  padding-top: 54px;
+
+  color: $green;
+
+  &__logo {
+    width: 202px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    margin-left: 35px;
+
+    font-size: 20px;
+    color: $white;
+    text-transform: uppercase;
+
+    &--alt {
+      color: $black-link;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &--active {
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -12px;
+
+        width: 100%;
+        height: 2px;
+
+        background-color: $green;
+      }
+
+      &-index {
+        &::before {
+          background-color: $white;
+        }
+      }
+    }
+  }
+
+  &__link:first-child {
+    margin-left: 0;
+  }
+}
+
+.map {
+  width: 100%;
+  height: 400px;
+
+  &__promo {
+    &-container {
+      position: relative;
+    }
+
+    position: absolute;
+    top: 95px;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 66px 90px 62px 76px;
+    width: 570px;
+
+    background-color: $white;
+
+    &-title {
+      width: 154px;
+
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $black-text;
+    }
+
+    &-text {
+      width: 155px;
+
+      font-family: $alternative-font;
+
+      &--city {
+        display: block;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__google-frame {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.footer {
+  background: $grey;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 40px;
+  }
+
+  &__logo-link {
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 29px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover{
+      .footer__link-img path{
+        fill: $green;
+      }
+    }
+  }
+
+  &__link {
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    align-items: center;
+
+    &-text {
+      margin-right: 23px;
+
+      font-family: $alternative-font;
+      line-height: 16px;
+      color: #444444;
+    }
+
+    &:hover {
+      .footer__copyright-image path{
+        fill: $green;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 60px;
+  font-weight: 400;
+  color: $black-text;
+  margin-bottom: 63px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $white;
+
+  background-color: $green;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba($color: $white, $alpha: 0.6);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body::before {
+    background-image: url(../images/index-background-desktop@2x.jpg);
+  }
 }

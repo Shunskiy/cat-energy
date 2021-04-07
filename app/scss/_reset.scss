@@ -51,3 +51,14 @@ select {
 a{
   text-decoration: none;
 }
+
+table {
+  border-spacing: 0;
+}
+
+input[type="range"]{
+  -webkit-appearance: none;
+  outline: none !important;
+  appearance:none;
+  border:none;
+}
