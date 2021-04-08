@@ -150,6 +150,11 @@
     background: url(../../images/gift-photo-desktop@1x.jpg) no-repeat
       center/cover;
 
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background: url(../../images/gift-photo-desktop@1x.jpg) no-repeat
+        center/cover;
+    }
+
     &-text {
       display: flex;
       flex-direction: column;

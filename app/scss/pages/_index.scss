@@ -342,7 +342,7 @@
   &__right {
     position: absolute;
     top: -185px;
-    left: 50%;
+    left: calc(50% - 40px);
   }
 
   &__slider {
