@@ -13,6 +13,10 @@ body {
   margin: 0 auto;
   width: $desktop;
   padding: 0 $desktop-pad;
+
+  &--line {
+    padding: 0;
+  }
 }
 
 .header {
@@ -157,8 +161,6 @@ body {
     align-items: center;
   }
 
-
-
   &__item {
     display: flex;
     align-items: center;
@@ -170,8 +172,8 @@ body {
       margin-right: 0;
     }
 
-    &:hover{
-      .footer__link-img path{
+    &:hover {
+      .footer__link-img path {
         fill: $green;
       }
     }
@@ -196,7 +198,7 @@ body {
     }
 
     &:hover {
-      .footer__copyright-image path{
+      .footer__copyright-image path {
         fill: $green;
       }
     }

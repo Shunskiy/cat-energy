@@ -11,10 +11,7 @@
   &__title {
     margin-bottom: 33px;
 
-    font-size: 60px;
     line-height: 60px;
-    font-weight: 400;
-    color: $black-text;
   }
 
   &__text {
@@ -442,7 +439,6 @@
     }
   }
 }
-
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .features {

@@ -1,10 +1,10 @@
-html{
+html {
   box-sizing: border-box;
 }
 
 *,
 *::after,
-*::before{
+*::before {
   box-sizing: inherit;
 }
 
@@ -45,10 +45,12 @@ input,
 button,
 textarea,
 select {
+  border: none;
+
   font: inherit;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -56,9 +58,9 @@ table {
   border-spacing: 0;
 }
 
-input[type="range"]{
+input[type="range"] {
   -webkit-appearance: none;
   outline: none !important;
-  appearance:none;
-  border:none;
+  appearance: none;
+  border: none;
 }
