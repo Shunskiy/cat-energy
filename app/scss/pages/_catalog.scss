@@ -1,12 +1,10 @@
-.catalog {
-  &__title {
-    margin-bottom: 156px;
-  }
+.catalog__title {
+  margin-bottom: 156px;
+}
 
-  &__list {
-    display: flex;
-    flex-flow: row wrap;
-  }
+.catalog__list {
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .card {
@@ -30,151 +28,99 @@
     background-color: $white;
     border: 1px solid #cdcdcd;
   }
+}
 
-  &__img {
-    position: absolute;
-    top: -45px;
+.card__img {
+  position: absolute;
+  top: -45px;
 
-    &--big {
-      top: -81px;
-    }
+  &--big {
+    top: -81px;
   }
+}
 
-  &__title {
+.card__title {
+  margin-bottom: 28px;
+
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  color: $black-text;
+
+  &--more {
+    position: relative;
+
     margin-bottom: 28px;
 
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-    color: $black-text;
+    &::before {
+      position: absolute;
+      top: -111px;
+      left: 53px;
 
-    &--more {
-      position: relative;
+      content: "";
+      width: 60px;
+      height: 60px;
 
-      margin-bottom: 28px;
-
-      &::before {
-        position: absolute;
-        top: -111px;
-        left: 53px;
-
-        content: "";
-        width: 60px;
-        height: 60px;
-
-        background-image: url(../../images/icon-plus.svg);
-      }
+      background-image: url(../../images/icon-plus.svg);
     }
   }
+}
 
-  &__table {
-    width: 100%;
-    margin-bottom: 24px;
+.card__table {
+  width: 100%;
+  margin-bottom: 24px;
 
-    border-spacing: 0 16px;
+  border-spacing: 0 16px;
+}
+
+.card__cell {
+  font-family: $alternative-font;
+
+  border-bottom: 1px solid #cdcdcd;
+
+  &--right-align {
+    text-align: right;
   }
+}
 
-  &__cell {
-    font-family: $alternative-font;
+.card__btn {
+  margin-top: auto;
 
-    border-bottom: 1px solid #cdcdcd;
+  width: 169px;
+  height: 40px;
 
-    &--right-align {
-      text-align: right;
+  font-size: 16px;
+  line-height: 20px;
+
+  &--more {
+    color: #444444;
+
+    background-color: #f2f2f2;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba($color: #444444, $alpha: 0.3);
     }
   }
+}
 
-  &__btn {
-    margin-top: auto;
+.card__text {
+  width: 170px;
 
-    width: 169px;
-    height: 40px;
+  margin-bottom: 85px;
 
-    font-size: 16px;
-    line-height: 20px;
-
-    &--more {
-      color: #444444;
-
-      background-color: #f2f2f2;
-
-      &:hover {
-        background-color: #ebebeb;
-      }
-
-      &:active {
-        color: rgba($color: #444444, $alpha: 0.3);
-      }
-    }
-  }
-
-  &__text {
-    width: 170px;
-
-    margin-bottom: 85px;
-
-    font-family: $alternative-font;
-    text-align: center;
-  }
+  font-family: $alternative-font;
+  text-align: center;
 }
 
 .extra {
   position: relative;
   margin-bottom: 86px;
-
-  &__container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__title {
-    width: 420px;
-    padding: 0 40px;
-    margin-bottom: 75px;
-
-    font-size: 36px;
-    line-height: 36px;
-    color: $black-text;
-    font-weight: 400;
-
-    background-color: $white;
-  }
-
-  &__special {
-    display: flex;
-    width: 245px;
-    padding: 65px 43px 45px 43px;
-
-    background: url(../../images/gift-photo-desktop@1x.jpg) no-repeat
-      center/cover;
-
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-      background: url(../../images/gift-photo-desktop@1x.jpg) no-repeat
-        center/cover;
-    }
-
-    &-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      font-family: $alternative-font;
-      text-align: center;
-      color: $white;
-
-      &::before {
-        display: block;
-        content: "";
-        width: 55px;
-        height: 60px;
-        margin-bottom: 65px;
-
-        background-image: url(../../images/icon-gift.svg);
-      }
-    }
-  }
 
   &::before {
     position: absolute;
@@ -190,6 +136,52 @@
   }
 }
 
+.extra__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.extra__title {
+  width: 420px;
+  padding: 0 40px;
+  margin-bottom: 75px;
+
+  font-size: 36px;
+  line-height: 36px;
+  color: $black-text;
+  font-weight: 400;
+
+  background-color: $white;
+}
+
+.extra__special {
+  display: flex;
+  width: 245px;
+  padding: 65px 43px 45px 43px;
+
+  background: url(../../images/gift-photo-desktop@1x.jpg) no-repeat center/cover;
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: $alternative-font;
+    text-align: center;
+    color: $white;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 55px;
+      height: 60px;
+      margin-bottom: 65px;
+
+      background-image: url(../../images/icon-gift.svg);
+    }
+  }
+}
+
 .item {
   display: flex;
   align-items: center;
@@ -201,35 +193,42 @@
   &:first-child {
     border-top: 1px solid #cdcdcd;
   }
+}
 
-  &__title {
-    width: 245px;
-    margin-right: 80px;
+.item__title {
+  width: 245px;
+  margin-right: 80px;
 
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 400;
-    text-align: left;
-    text-transform: uppercase;
-    color: $black-link;
-  }
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+  color: $black-link;
+}
 
-  &__about {
-    width: 245px;
+.item__about {
+  width: 245px;
 
-    font-family: $alternative-font;
-    text-align: left;
-  }
+  font-family: $alternative-font;
+  text-align: left;
+}
 
-  &__price {
-    width: 45px;
-    margin-right: 40px;
+.item__price {
+  width: 45px;
+  margin-right: 40px;
 
-    font-family: $alternative-font;
-  }
+  font-family: $alternative-font;
+}
 
-  &__btn {
-    width: 245px;
-    height: 40px;
+.item__btn {
+  width: 245px;
+  height: 40px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .extra__special {
+    background: url(../../images/gift-photo-desktop@1x.jpg) no-repeat
+      center/cover;
   }
 }

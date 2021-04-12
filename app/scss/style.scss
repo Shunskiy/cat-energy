@@ -1,10 +1,11 @@
 @import "vars";
 @import "fonts";
 @import "reset";
-@import "libs";
+@import "mixins";
 @import "global";
 
 // Import blocks
 
 @import "pages/index";
 @import "pages/catalog";
+@import "pages/form"
