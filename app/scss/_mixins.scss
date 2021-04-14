@@ -12,3 +12,9 @@
     background-color: $green;
   }
 }
+
+@mixin tablet-media {
+  @media (max-width: $desktop - 21) {
+    @content;
+  }
+}
