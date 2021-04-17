@@ -13,8 +13,18 @@
 
   <header class="header">
     <div class="header__container container">
-      <img class="header__logo" src="images/logo-desktop.svg" width="202" height="59" alt="Cat Energy">
-      <nav class="header__nav-bar">
+      <div class="header__logo-container">
+        <picture>
+          <source media="(max-width: 767px)" srcset="./images/icon-logo-mobile.svg">
+          <source media="(max-width: 1279px)" srcset="./images/logo-tablet.svg">
+          <img class="header__logo" src="./images/logo-desktop.svg" width="202" height="59" alt="Cat Energy">
+        </picture>
+        <img class="header__logo-text" src="./images/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
+        <div class="header__toggle-nav">
+          <div class="header__toggle-button"></div>
+        </div>
+      </div>
+      <nav class="header__nav-bar header__nav-bar--disable">
         <a class="header__link header__link--alt" href="./index.html">Главная</a>
         <a class="header__link header__link--alt header__link--active" href="./catalog.html">Каталог продукции</a>
         <a class="header__link header__link--alt" href="./form.html">Подбор программы</a>
@@ -307,6 +317,7 @@
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_XwCTNAFqA3mffd2Tn1rJgqzHVFZ8XZk"></script>
   <script src="./js/google_maps.js"></script>
+  <script src="./js/nav_bar.js"></script>
 </body>
 
 </html>
