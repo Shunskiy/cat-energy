@@ -45,6 +45,8 @@ body {
   @include mobile-media {
     padding-top: 11px;
     padding-bottom: 11px;
+
+    border-bottom: 1px solid #cdcdcd;
   }
 }
 
@@ -118,7 +120,7 @@ body {
     width: 100%;
 
     background-color: $white;
-    border-radius: 0px 0px 10px 10px;
+    border-bottom: 1px solid $grey;
 
     transition: max-height ease-in 0.1s;
   }
@@ -128,6 +130,7 @@ body {
   .header__nav-bar--disable {
     max-height: 0;
     overflow: hidden;
+    border: 0;
   }
 }
 

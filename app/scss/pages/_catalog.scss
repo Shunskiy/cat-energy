@@ -1,3 +1,15 @@
+.header--catalog {
+  @include mobile-media {
+    margin-bottom: 32px;
+  }
+}
+
+.main__container--catalog {
+  @include mobile-media {
+    padding: 0;
+  }
+}
+
 .catalog {
   @include tablet-media {
     margin-bottom: 71px;
@@ -6,6 +18,12 @@
 
 .catalog__title {
   margin-bottom: 156px;
+
+  @include mobile-media {
+    margin-bottom: 36px;
+
+    padding-left: $mobile-pad;
+  }
 }
 
 .catalog__list {
@@ -43,10 +61,19 @@
     width: 324px;
     margin-left: 0;
   }
+
+  @include mobile-media {
+    width: 100%;
+    padding: 25px $mobile-pad;
+    margin-bottom: 0;
+
+    border: 1px solid #ededed;
+    background-color: transparent;
+  }
 }
 
 @include tablet-media {
-  .card:nth-last-child(-n+2) {
+  .card:nth-last-child(-n + 2) {
     margin-bottom: 0;
   }
 }
@@ -54,9 +81,20 @@
 .card__img {
   position: absolute;
   top: -45px;
+  left: 50%;
+  transform: translate(-50%, 0);
 
   &--big {
     top: -81px;
+  }
+
+  @include mobile-media {
+    top: 0;
+    left: 20px;
+    transform: translate(0, 0);
+
+    width: 139px;
+    height: 144px;
   }
 }
 
@@ -88,6 +126,16 @@
 
     background-image: url(../../images/icon-plus.svg);
   }
+
+  @include mobile-media {
+    margin-left: auto;
+    margin-bottom: 13px;
+    width: 50%;
+
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+  }
 }
 
 @include tablet-media {
@@ -98,11 +146,35 @@
   }
 }
 
+@include mobile-media {
+  .card__title--more {
+    margin-top: 58px;
+    margin-bottom: 11px;
+    width: 100%;
+  }
+
+  .card__title--more::before {
+    top: -56px;
+    left: 50%;
+
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .card__table {
   width: 100%;
   margin-bottom: 24px;
 
   border-spacing: 0 16px;
+
+  @include mobile-media {
+    width: 50%;
+    margin-left: auto;
+    margin-bottom: 15px;
+
+    border-spacing: 0;
+  }
 }
 
 .card__cell {
@@ -112,6 +184,13 @@
 
   &--right-align {
     text-align: right;
+  }
+
+  @include mobile-media {
+    font-size: 12px;
+    line-height: 16px;
+
+    border: 0;
   }
 }
 
@@ -150,6 +229,14 @@
 
   font-family: $alternative-font;
   text-align: center;
+
+  @include mobile-media {
+    width: 100%;
+    margin-bottom: 22px;
+
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 .extra {
@@ -195,6 +282,16 @@
   font-weight: 400;
 
   background-color: $white;
+
+  @include mobile-media {
+    width: 266px;
+    margin-bottom: 30px;
+    padding: 6px 20px 0px 20px;
+    transform: translate(-20px, 0);
+
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .extra__special {
@@ -212,6 +309,15 @@
     padding: 0 132px 0 91px;
 
     background-image: url(../../images/gift-photo-tablet@1x.jpg);
+  }
+
+  @include mobile-media {
+    min-height: 289px;
+
+    padding: 65px 61px 45px 60px;
+    flex-direction: column;
+
+    background-image: url(../../images/gift-photo-mobile@1x.jpg);
   }
 }
 
@@ -241,6 +347,13 @@
 
     text-align: left;
   }
+
+  @include mobile-media {
+    margin:auto auto 0 auto;
+    width: 149px;
+
+    text-align: center;
+  }
 }
 
 @include tablet-media {
@@ -251,9 +364,25 @@
   }
 }
 
+@include mobile-media {
+  .extra__special-text::before {
+    top: 65px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 55px;
+    height: 60px;
+    margin-bottom: 0;
+  }
+}
+
 .extra__items {
   @include tablet-media {
     margin-bottom: 70px;
+  }
+
+  @include mobile-media {
+    margin-bottom: 39px;
   }
 }
 
@@ -278,6 +407,13 @@
     border: 1px solid #cdcdcd;
     border-bottom: 0;
   }
+
+  @include mobile-media {
+    padding: 0;
+
+    border-left: 0;
+    border-right: 0;
+  }
 }
 
 @include tablet-media {
@@ -301,6 +437,15 @@
     width: auto;
     margin: 25px 0;
   }
+
+  @include mobile-media {
+    width: 100%;
+    margin: 0;
+    margin: 15px 0;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .item__about {
@@ -312,6 +457,15 @@
   @include tablet-media {
     width: auto;
     margin-left: auto;
+  }
+
+  @include mobile-media {
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: 16px;
+
+    font-size: 14px;
+    line-height: 14px;
   }
 }
 
@@ -327,6 +481,14 @@
 
     text-align: right;
   }
+
+  @include mobile-media {
+    margin-bottom: 16px;
+    margin-left: 0;
+
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .item__btn {
@@ -337,6 +499,10 @@
     margin-bottom: 28px;
     width: 633px;
   }
+
+  @include mobile-media {
+    margin-bottom: 17px;
+  }
 }
 
 @include retina-2x {
@@ -345,6 +511,10 @@
 
     @include tablet-media {
       background-image: url(../../images/gift-photo-tablet@2x.jpg);
+    }
+
+    @include mobile-media {
+      background-image: url(../../images/gift-photo-mobile@2x.jpg);
     }
   }
 }
