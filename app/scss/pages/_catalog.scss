@@ -1,3 +1,9 @@
+.catalog {
+  @include tablet-media {
+    margin-bottom: 71px;
+  }
+}
+
 .catalog__title {
   margin-bottom: 156px;
 }
@@ -5,6 +11,10 @@
 .catalog__list {
   display: flex;
   flex-flow: row wrap;
+
+  @include tablet-media {
+    justify-content: space-between;
+  }
 }
 
 .card {
@@ -15,7 +25,7 @@
   align-items: center;
   width: 245px;
   margin-left: 80px;
-  margin-bottom: 142px;
+  margin-bottom: 140px;
   padding: 165px 39px 40px 39px;
 
   background-color: $grey;
@@ -27,6 +37,17 @@
   &--more {
     background-color: $white;
     border: 1px solid #cdcdcd;
+  }
+
+  @include tablet-media {
+    width: 324px;
+    margin-left: 0;
+  }
+}
+
+@include tablet-media {
+  .card:nth-last-child(-n+2) {
+    margin-bottom: 0;
   }
 }
 
@@ -53,18 +74,27 @@
     position: relative;
 
     margin-bottom: 28px;
+  }
 
-    &::before {
-      position: absolute;
-      top: -111px;
-      left: 53px;
+  &--more::before {
+    position: absolute;
+    top: -111px;
+    left: 50%;
+    transform: translate(-50%, 0);
 
-      content: "";
-      width: 60px;
-      height: 60px;
+    content: "";
+    width: 60px;
+    height: 60px;
 
-      background-image: url(../../images/icon-plus.svg);
-    }
+    background-image: url(../../images/icon-plus.svg);
+  }
+}
+
+@include tablet-media {
+  .card__title--more {
+    width: 140px;
+
+    text-align: center;
   }
 }
 
@@ -107,6 +137,10 @@
       color: rgba($color: #444444, $alpha: 0.3);
     }
   }
+
+  @include tablet-media {
+    width: 100%;
+  }
 }
 
 .card__text {
@@ -134,11 +168,20 @@
 
     background-color: $green;
   }
+
+  @include tablet-media {
+    margin-bottom: 76px;
+  }
 }
 
 .extra__container {
   display: flex;
   justify-content: space-between;
+
+  @include tablet-media {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 
 .extra__title {
@@ -155,30 +198,62 @@
 }
 
 .extra__special {
+  position: relative;
+
   display: flex;
   width: 245px;
   padding: 65px 43px 45px 43px;
 
   background: url(../../images/gift-photo-desktop@1x.jpg) no-repeat center/cover;
 
-  &-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  @include tablet-media {
+    width: 100%;
+    height: 200px;
+    padding: 0 132px 0 91px;
 
-    font-family: $alternative-font;
-    text-align: center;
-    color: $white;
+    background-image: url(../../images/gift-photo-tablet@1x.jpg);
+  }
+}
 
-    &::before {
-      display: block;
-      content: "";
-      width: 55px;
-      height: 60px;
-      margin-bottom: 65px;
+.extra__special-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-      background-image: url(../../images/icon-gift.svg);
-    }
+  font-family: $alternative-font;
+  text-align: center;
+  color: $white;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 55px;
+    height: 60px;
+    margin-bottom: 65px;
+
+    background-image: url(../../images/icon-gift.svg);
+  }
+
+  @include tablet-media {
+    margin-left: auto;
+    flex-direction: row;
+    width: 160px;
+
+    text-align: left;
+  }
+}
+
+@include tablet-media {
+  .extra__special-text::before {
+    position: absolute;
+    top: 65px;
+    left: 91px;
+  }
+}
+
+.extra__items {
+  @include tablet-media {
+    margin-bottom: 70px;
   }
 }
 
@@ -193,6 +268,22 @@
   &:first-child {
     border-top: 1px solid #cdcdcd;
   }
+
+  @include tablet-media {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 0 36px;
+
+    border: 1px solid #cdcdcd;
+    border-bottom: 0;
+  }
+}
+
+@include tablet-media {
+  .item:last-child {
+    border-bottom: 1px solid #cdcdcd;
+  }
 }
 
 .item__title {
@@ -205,6 +296,11 @@
   text-align: left;
   text-transform: uppercase;
   color: $black-link;
+
+  @include tablet-media {
+    width: auto;
+    margin: 25px 0;
+  }
 }
 
 .item__about {
@@ -212,6 +308,11 @@
 
   font-family: $alternative-font;
   text-align: left;
+
+  @include tablet-media {
+    width: auto;
+    margin-left: auto;
+  }
 }
 
 .item__price {
@@ -219,16 +320,31 @@
   margin-right: 40px;
 
   font-family: $alternative-font;
+
+  @include tablet-media {
+    margin-right: 0;
+    margin-left: 95px;
+
+    text-align: right;
+  }
 }
 
 .item__btn {
   width: 245px;
   height: 40px;
+
+  @include tablet-media {
+    margin-bottom: 28px;
+    width: 633px;
+  }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@include retina-2x {
   .extra__special {
-    background: url(../../images/gift-photo-desktop@1x.jpg) no-repeat
-      center/cover;
+    background-image: url(../../images/gift-photo-desktop@2x.jpg);
+
+    @include tablet-media {
+      background-image: url(../../images/gift-photo-tablet@2x.jpg);
+    }
   }
 }

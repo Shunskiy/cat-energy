@@ -239,10 +239,18 @@ body {
 
   @include tablet-media {
     height: 600px;
+
+    background-color: $grey;
   }
 
   @include mobile-media {
     height: 544px;
+  }
+}
+
+@include tablet-media {
+  .map--index {
+    background-color: $white;
   }
 }
 
@@ -260,7 +268,6 @@ body {
   padding: 66px 90px 62px 76px;
   width: 570px;
 
-  background-color: $white;
 
   @include tablet-media {
     position: static;
@@ -340,6 +347,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 64px 40px;
+
+  @include tablet-media {
+    padding: 64px $tablet-pad;
+  }
 
   @include mobile-media {
     padding: 39px $mobile-pad 22px $mobile-pad;

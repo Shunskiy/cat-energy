@@ -768,10 +768,15 @@
 
   display: flex;
   align-items: center;
-  width: 311px;
-  height: 232px;
+  width: 690px;
+  height: 517px;
 
   overflow: hidden;
+
+  @include mobile-media {
+    width: 311px;
+    height: 232px;
+  }
 }
 
 .example__img {
@@ -916,7 +921,7 @@
   }
 
   .top::before {
-    background-image: url(../images/index-background-desktop@1x.jpg);
+    background-image: url(../images/index-background-desktop@2x.jpg);
   }
 
   .top__description::before {
