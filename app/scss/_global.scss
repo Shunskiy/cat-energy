@@ -50,6 +50,12 @@ body {
   }
 }
 
+@include mobile-media {
+  .header--form {
+    margin-bottom: 31px;
+  }
+}
+
 .header__logo-text {
   display: none;
 
@@ -356,7 +362,7 @@ body {
   }
 
   @include mobile-media {
-    padding: 39px $mobile-pad 22px $mobile-pad;
+    padding: 0 $mobile-pad 22px $mobile-pad;
     flex-direction: column;
   }
 }
@@ -380,7 +386,7 @@ body {
 
 .footer__logo {
   @include mobile-media {
-    margin: 0 auto;
+    margin: 40px auto 0 auto;
   }
 }
 
