@@ -83,7 +83,7 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 
 
-exports.build = series(cleanDist, images, build);
+exports.build = series(images, build);
 exports.default = parallel(styles ,scripts ,browsersync, watching);
 
 
