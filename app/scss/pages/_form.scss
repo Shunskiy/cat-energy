@@ -11,12 +11,23 @@
   font-weight: 400;
   text-transform: uppercase;
   color: $black-text;
+
+  @include tablet-media {
+    width: 400px;
+    padding-left: 40px;
+  }
 }
 
 .form__info-wrapper {
   display: flex;
   justify-content: space-between;
   margin-bottom: 73px;
+
+  @include tablet-media {
+    padding-left: 40px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 
 .form__info-item {
@@ -31,6 +42,11 @@
 
 .form__cat-id {
   width: 570px;
+
+  @include tablet-media {
+    width: calc(100% - 37px);
+    margin-bottom: 72px;
+  }
 }
 
 .form__input {
@@ -112,6 +128,10 @@
   padding-left: 28px;
 
   border: 1px solid #cdcdcd;
+
+  @include tablet-media {
+    width: calc(100% - 37px);
+  }
 }
 
 .form__radio {
@@ -160,6 +180,10 @@
 .form__owner-list {
   display: flex;
   justify-content: space-between;
+
+  @include tablet-media {
+    flex-direction: column;
+  }
 }
 
 .form__owner-item {
@@ -168,6 +192,18 @@
   display: flex;
   align-items: center;
   width: 570px;
+
+  @include tablet-media {
+    width: calc(100% - 37px);
+    margin-bottom: 20px;
+    padding-left: 40px;
+  }
+}
+
+@include tablet-media {
+  .form__owner-item:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form__input-img {
@@ -200,8 +236,7 @@
 
 .form__textarea {
   width: 100%;
-  padding-top: 17px;
-  padding-left: 20px;
+  padding: 17px 20px 0px 20px;
 
   font-size: 20px;
   line-height: 30px;
@@ -211,6 +246,17 @@
   border: 1px solid #cdcdcd;
 
   resize: none;
+
+  @include tablet-media {
+    width: calc(100% - 37px);
+    height: 174px;
+  }
+}
+
+@include tablet-media {
+  .form__container--textarea {
+    padding-left: 70px;
+  }
 }
 
 .form__extra {
@@ -221,13 +267,31 @@
   @include title-line;
 }
 
+@include tablet-media {
+  .form__container--extra {
+    padding-left: 70px;
+  }
+}
+
 .form__extra-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .form__extra-item {
   width: 245px;
+
+  @include tablet-media {
+    width: calc(50% - 30px);
+    margin-bottom: 32px;
+  }
+}
+
+@include tablet-media {
+  .form__extra-item:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
 }
 
 .form__checkbox {
@@ -298,15 +362,27 @@
 .form__container--submit {
   display: flex;
   align-items: center;
+
+  @include tablet-media {
+    padding-left: 70px;
+  }
 }
 
 .form__button {
   width: 568px;
   height: 52px;
+
+  @include tablet-media {
+    width: calc(50% - 30px);
+  }
 }
 
 .form__submit-text {
   font-family: $alternative-font;
   color: #444444;
   margin-left: 80px;
+
+  @include tablet-media {
+    margin-left: 60px;
+  }
 }
