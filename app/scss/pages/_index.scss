@@ -895,6 +895,37 @@
   }
 }
 
+.example__slider-input::-moz-range-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #cdcdcd;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: $white url(../../images/slider-control.svg) no-repeat center/8px
+    8px;
+  cursor: pointer;
+
+  &:hover {
+    filter: drop-shadow(0px 3px 2.5px rgba(0, 0, 0, 0.25));
+  }
+
+  &:active {
+    filter: drop-shadow(0px 4px 2.5px rgba(0, 0, 0, 0.3));
+    border: 2px solid #68b738;
+  }
+
+  @include mobile-media {
+    width: 35px;
+    height: 6px;
+
+    border-radius: 3px;
+
+    background-color: $green;
+    background-image: none;
+    border: none;
+  }
+}
+
 @include retina-2x {
   .features__item--leaf::before {
     background-image: url(../../images/advantage-leaf@2x.png);

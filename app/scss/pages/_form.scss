@@ -322,12 +322,16 @@
   }
 }
 
-.form_comment {
+.form__comment {
   position: relative;
 
   margin-bottom: 71px;
 
   @include title-line;
+
+  @include mobile-media {
+    margin-bottom: 24px;
+  }
 }
 
 .form__textarea {
