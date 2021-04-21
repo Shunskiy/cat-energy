@@ -40,7 +40,7 @@ function images() {
 
 function scripts() {
   return src([
-    'app/js/main.js',
+    'app/js/*.js',
   ])
     .pipe(dest('app/js'))
     .pipe(browserSync.stream())
@@ -63,7 +63,7 @@ function build() {
   return src([
     'app/css/style.css',
     'app/fonts/**/*',
-    'app/js/main.js',
+    'app/js/*.js',
     'app/*.html'
   ], {base: 'app'})
     .pipe(dest('dist'))
@@ -83,7 +83,7 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 
 
-exports.build = series(cleanDist, images, build);
+exports.build = series(images, build);
 exports.default = parallel(styles ,scripts ,browsersync, watching);
 
 

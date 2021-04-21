@@ -1,0 +1,520 @@
+.header--catalog {
+  @include mobile-media {
+    margin-bottom: 32px;
+  }
+}
+
+.main__container--catalog {
+  @include mobile-media {
+    padding: 0;
+  }
+}
+
+.catalog {
+  @include tablet-media {
+    margin-bottom: 71px;
+  }
+}
+
+.catalog__title {
+  margin-bottom: 156px;
+
+  @include mobile-media {
+    margin-bottom: 36px;
+
+    padding-left: $mobile-pad;
+  }
+}
+
+.catalog__list {
+  display: flex;
+  flex-flow: row wrap;
+
+  @include tablet-media {
+    justify-content: space-between;
+  }
+}
+
+.card {
+  position: relative;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 245px;
+  margin-left: 80px;
+  margin-bottom: 140px;
+  padding: 165px 39px 40px 39px;
+
+  background-color: $grey;
+
+  &:nth-child(4n + 1) {
+    margin-left: 0;
+  }
+
+  &--more {
+    background-color: $white;
+    border: 1px solid #cdcdcd;
+  }
+
+  @include tablet-media {
+    width: 324px;
+    margin-left: 0;
+  }
+
+  @include mobile-media {
+    width: 100%;
+    padding: 25px $mobile-pad;
+    margin-bottom: 0;
+
+    border: 1px solid #ededed;
+    background-color: transparent;
+  }
+}
+
+@include tablet-media {
+  .card:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+}
+
+.card__img {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  &--big {
+    top: -81px;
+  }
+
+  @include mobile-media {
+    top: 0;
+    left: 20px;
+    transform: translate(0, 0);
+
+    width: 139px;
+    height: 144px;
+  }
+}
+
+.card__title {
+  margin-bottom: 28px;
+
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  color: $black-text;
+
+  &--more {
+    position: relative;
+
+    margin-bottom: 28px;
+  }
+
+  &--more::before {
+    position: absolute;
+    top: -111px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    content: "";
+    width: 60px;
+    height: 60px;
+
+    background-image: url(../../images/icon-plus.svg);
+  }
+
+  @include mobile-media {
+    margin-left: auto;
+    margin-bottom: 13px;
+    width: 50%;
+
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+  }
+}
+
+@include tablet-media {
+  .card__title--more {
+    width: 140px;
+
+    text-align: center;
+  }
+}
+
+@include mobile-media {
+  .card__title--more {
+    margin-top: 58px;
+    margin-bottom: 11px;
+    width: 100%;
+  }
+
+  .card__title--more::before {
+    top: -56px;
+    left: 50%;
+
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.card__table {
+  width: 100%;
+  margin-bottom: 24px;
+
+  border-spacing: 0 16px;
+
+  @include mobile-media {
+    width: 50%;
+    margin-left: auto;
+    margin-bottom: 15px;
+
+    border-spacing: 0;
+  }
+}
+
+.card__cell {
+  font-family: $alternative-font;
+
+  border-bottom: 1px solid #cdcdcd;
+
+  &--right-align {
+    text-align: right;
+  }
+
+  @include mobile-media {
+    font-size: 12px;
+    line-height: 16px;
+
+    border: 0;
+  }
+}
+
+.card__btn {
+  margin-top: auto;
+
+  width: 169px;
+  height: 40px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  &--more {
+    color: #444444;
+
+    background-color: #f2f2f2;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba($color: #444444, $alpha: 0.3);
+    }
+  }
+
+  @include tablet-media {
+    width: 100%;
+  }
+}
+
+.card__text {
+  width: 170px;
+
+  margin-bottom: 85px;
+
+  font-family: $alternative-font;
+  text-align: center;
+
+  @include mobile-media {
+    width: 100%;
+    margin-bottom: 22px;
+
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.extra {
+  position: relative;
+  margin-bottom: 86px;
+
+  &::before {
+    position: absolute;
+    z-index: -10;
+    top: 21px;
+
+    content: "";
+    width: 100vw;
+    height: 3px;
+    left: auto;
+
+    background-color: $green;
+  }
+
+  @include tablet-media {
+    margin-bottom: 76px;
+  }
+}
+
+.extra__container {
+  display: flex;
+  justify-content: space-between;
+
+  @include tablet-media {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.extra__title {
+  width: 420px;
+  padding: 0 40px;
+  margin-bottom: 75px;
+
+  font-size: 36px;
+  line-height: 36px;
+  color: $black-text;
+  font-weight: 400;
+
+  background-color: $white;
+
+  @include mobile-media {
+    width: 266px;
+    margin-bottom: 30px;
+    padding: 6px 20px 0px 20px;
+    transform: translate(-20px, 0);
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.extra__special {
+  position: relative;
+
+  display: flex;
+  width: 245px;
+  padding: 65px 43px 45px 43px;
+
+  background: url(../../images/gift-photo-desktop@1x.jpg) no-repeat center/cover;
+
+  @include tablet-media {
+    width: 100%;
+    height: 200px;
+    padding: 0 132px 0 91px;
+
+    background-image: url(../../images/gift-photo-tablet@1x.jpg);
+  }
+
+  @include mobile-media {
+    min-height: 289px;
+
+    padding: 65px 61px 45px 60px;
+    flex-direction: column;
+
+    background-image: url(../../images/gift-photo-mobile@1x.jpg);
+  }
+}
+
+.extra__special-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: $alternative-font;
+  text-align: center;
+  color: $white;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 55px;
+    height: 60px;
+    margin-bottom: 65px;
+
+    background-image: url(../../images/icon-gift.svg);
+  }
+
+  @include tablet-media {
+    margin-left: auto;
+    flex-direction: row;
+    width: 160px;
+
+    text-align: left;
+  }
+
+  @include mobile-media {
+    margin:auto auto 0 auto;
+    width: 149px;
+
+    text-align: center;
+  }
+}
+
+@include tablet-media {
+  .extra__special-text::before {
+    position: absolute;
+    top: 65px;
+    left: 91px;
+  }
+}
+
+@include mobile-media {
+  .extra__special-text::before {
+    top: 65px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 55px;
+    height: 60px;
+    margin-bottom: 0;
+  }
+}
+
+.extra__items {
+  @include tablet-media {
+    margin-bottom: 70px;
+  }
+
+  @include mobile-media {
+    margin-bottom: 39px;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  width: 895px;
+  padding: 16px 0;
+
+  border-bottom: 1px solid #cdcdcd;
+
+  &:first-child {
+    border-top: 1px solid #cdcdcd;
+  }
+
+  @include tablet-media {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 0 36px;
+
+    border: 1px solid #cdcdcd;
+    border-bottom: 0;
+  }
+
+  @include mobile-media {
+    padding: 0;
+
+    border-left: 0;
+    border-right: 0;
+  }
+}
+
+@include tablet-media {
+  .item:last-child {
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.item__title {
+  width: 245px;
+  margin-right: 80px;
+
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+  color: $black-link;
+
+  @include tablet-media {
+    width: auto;
+    margin: 25px 0;
+  }
+
+  @include mobile-media {
+    width: 100%;
+    margin: 0;
+    margin: 15px 0;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.item__about {
+  width: 245px;
+
+  font-family: $alternative-font;
+  text-align: left;
+
+  @include tablet-media {
+    width: auto;
+    margin-left: auto;
+  }
+
+  @include mobile-media {
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: 16px;
+
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.item__price {
+  width: 45px;
+  margin-right: 40px;
+
+  font-family: $alternative-font;
+
+  @include tablet-media {
+    margin-right: 0;
+    margin-left: 95px;
+
+    text-align: right;
+  }
+
+  @include mobile-media {
+    margin-bottom: 16px;
+    margin-left: 0;
+
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.item__btn {
+  width: 245px;
+  height: 40px;
+
+  @include tablet-media {
+    margin-bottom: 28px;
+    width: 633px;
+  }
+
+  @include mobile-media {
+    margin-bottom: 17px;
+  }
+}
+
+@include retina-2x {
+  .extra__special {
+    background-image: url(../../images/gift-photo-desktop@2x.jpg);
+
+    @include tablet-media {
+      background-image: url(../../images/gift-photo-tablet@2x.jpg);
+    }
+
+    @include mobile-media {
+      background-image: url(../../images/gift-photo-mobile@2x.jpg);
+    }
+  }
+}

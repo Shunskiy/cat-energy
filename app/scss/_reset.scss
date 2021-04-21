@@ -1,10 +1,10 @@
-html{
+html {
   box-sizing: border-box;
 }
 
 *,
 *::after,
-*::before{
+*::before {
   box-sizing: inherit;
 }
 
@@ -45,9 +45,38 @@ input,
 button,
 textarea,
 select {
+  border: none;
+
   font: inherit;
 }
 
-a{
+fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+a {
   text-decoration: none;
 }
+
+table {
+  border-spacing: 0;
+}
+
+input:focus, textarea:focus {
+  outline: 1px solid $green;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  outline: none !important;
+  appearance: none;
+  border: none;
+}
+
+// input[type=number] {
+//   -moz-appearance:textfield;
+// }
+
